@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
-import PostList from './component/PostList/PostList';
-import Post from './component/Post/Post';
+import PostList from './Components/PostList/PostList';
+import Post from './Components/Post/Post';
 import './App.css';
 
 class App extends React.Component {
@@ -37,7 +37,7 @@ render() {
     <Router>
       <div className="App">
         <header className="App-header">
-          BlogBox
+          Cooking Together
         </header>
         <main className="App-content">
           <Switch>

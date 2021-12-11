@@ -1,17 +1,33 @@
-.postListItem{
+.postListItem {
     padding: 10px;
-    border: solid 1px transparent;
+    border: solid 1px ;
+    border-color: rgb(63, 151, 173);
+    background-color: rgb(211, 226, 220);
+    
 }
 
-.postListItem:hover{
+.postListItem:hover {
     background-color: #eeeeee;
-    border-color: #aaaaaa;
+    border-color: #4234b9;
     cursor: pointer;
+    color: #4234b9;
 }
 
-.postListItem p {
+.postListItem p,h2 {
     max-width: 500px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: rgb(47, 132, 201);
+    font-weight: 700;
+    
+}
+.postControls{
+    margin: 10px 0 10px 0;
+}
+
+.postControls button{
+    margin-left: 10px;
+    background-color: #4234b9;
+    border-color: aqua;
 }
