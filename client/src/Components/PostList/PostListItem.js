@@ -1,11 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import slugify from 'slugify';
-
-
+import './style.css';
 
 const PostListItem = props => {
-    const { post, clickPost, deletePost } = props;
+    const { post, clickPost, deletePost, editPost} = props;
     const history = useHistory();
 
     const handleClickPost = post => {
@@ -14,18 +13,23 @@ const PostListItem = props => {
         clickPost(post);
         history.push(`/posts/${slug}`);
     };
+     const handleEditPost = post => {
+    editPost(post);
+    history.push(`/edit-post/${post.id}`);
+  };
 
     return (
-        <div>
-            <div className="postListItem" onClick={() => handleClickPost(post)}>
-                <h2>{post.title}</h2>
-                <p>{post.body}</p>
-            </div>
-            <div className="postControls">
-                <button onClick={() => deletePost(post)}>Delete</button>
-            </div>
-        </div>
-    );
+    <div>
+      <div className="postListItem" onClick={() => handleClickPost(post)}>
+        <h2>{post.title}</h2>
+        <p>{post.body}</p>
+      </div>
+      <div className="postControls">
+        <button onClick={() => deletePost(post)}>Remove Recipe</button>
+        <button onClick={() => handleEditPost(post)}>Edit Recipe</button>
+      </div>
+    </div>
+  );
 };
 
 export default PostListItem;
