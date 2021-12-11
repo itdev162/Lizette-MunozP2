@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          BlogBox
+          Cooking Together
         </header>
         <main className="App-content">
           {posts.map((post: any) =>
