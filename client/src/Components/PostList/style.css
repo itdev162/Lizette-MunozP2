@@ -1,9 +1,9 @@
-.postListItem {
+.postListItem{
     padding: 10px;
     border: solid 1px transparent;
 }
 
-.postListItem:hover {
+.postListItem:hover{
     background-color: #eeeeee;
     border-color: #aaaaaa;
     cursor: pointer;
